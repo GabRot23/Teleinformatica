@@ -115,7 +115,7 @@ Onda pura a partir de la cual pueden formarse las demás.
 
 Es la amplitud en función de la frecuencia en vez de en función del tiempo.
 
->![Espectro de onda](./assets/EspectroOnda.jpg)
+<img src="./assets/EspectroOnda.jpg" width="50%">
 
 ---
 
@@ -144,10 +144,10 @@ Es la suma de infinitas ondas seno de A decrecientes.
 
 ### Ejercicios Resueltos
 
-> ![Ejercicio 1](./assets/EjGraficoOndaSinusoidal.jpg)
+<img src="./assets/EjGraficoOndaSinusoidal.jpg" width="80%">
 
-> ![Ejercio OC1](./assets/EjOndaCuadrada1.jpg)
-> ![Ejercicio OC2](./assets/EjOndaCuadrada2.jpg)
+<img src="./assets/EjOndaCuadrada1.jpg" width="80%">
+<img src="./assets/EjOndaCuadrada2.jpg" width="80%">
 
 ---
 
@@ -678,4 +678,55 @@ La IEEE estandarizó varias redes de área local y área metropolitana bajo el n
 - LLC (control de enlace lógico): el objetivo de LLC esproporcionar control de flujo y error a los protocolos de másalto nivel que realmente demanden estos servicios.
 - MAC (control de acceso al medio): define los métodos deacceso específicos para cada LAN y el formato de la tramarespectivo.
 
-## Dispositivos de Red
+![LLC y MAC](./assets/LLCMAC.jpg)
+
+### Dirección Ethernet
+
+![MAC Address](./assets/MACAddress.jpg)
+
+* **Unicast**: relación uno a uno entre el Tx y el Rx. El primer bit es 0.
+* **Multicast**: relación uno a un grupo de direcciones destino entre el Tx y las estaciones Rx. El primer bit es 1.
+* **Broadcast**: los receptores son todas las estaciones de la LAN. Todos los bits están en 1.
+
+### Implemetanciones estándar de Ethernet
+
+![Implementaciones Ethernet](./assets/EthernetImplementations.jpg)
+
+### Codificación en cableados Ethernet
+
+![Codificación Ethernet](./assets/EthernetCodificacion.jpg)
+
+- **Codificación manchester** &rarr; Codificación bifase. Cada bite es una transición entre dos niveles de señal.
+
+- **Codificación manchester diferencial** &rarr; 1 bit en 1 se indica con ausencia de transición. 0 con transición al inicio del intervalo.
+
+---
+
+## Dispositivos de Red capa 2
+
+#### <ins>Bridge</ins>
+- Repetear + lectura de MAC Address
+- Conectan 2 LANs en el mismo protocolo
+
+### Dispositivos por Capas
+
+![Dispositivos por Capa](./assets/DispositivosPorCapa.jpg)
+
+### Hub vs Bridge vs Switch
+
+![Hub vs Bridge vs Switch](./assets/HubBridgeSwitch.jpg)
+
+### VLANs
+
+Es una técnica utilizada en redes para agrupar dispositivos de red en dominios de difusión separados, independientemente de su ubicación física. 
+Esencialmente, permite a los administradores de red dividir una red física en múltiples redes lógicas.
+
+<ins>Ventajas</ins>
+- Seguridad.
+- Reducción de tráfico.
+- Flexibilidad y administración.
+- Mejora de rendimiento.
+
+### Resumen
+
+![Resumen](./assets/Sumary.jpg)
