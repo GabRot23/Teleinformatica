@@ -439,7 +439,7 @@ Soporte que permite que la información viaje entre dos puntos, más o menos dis
     - Las ondas emanan hacia arriba, hacia abajo o hacia delante y se pueden reflejar sobre la superficie de la tierra o parte de la atmósfera.
     - Las ondas reflejadas que llegan a la antena receptora más tarde que la porción directa de la transmisión puede corromper la señal recibida.
 
-5. Propagación por el espacio
+5. **Propagación por el espacio**
   - Utiliza como retransmisor satélites en lugar de refracción atmosférica.
   - Una señal radiada es recibida por un satélite situado en una determinada órbita, que la reenvía de vuelta a la tierra para el receptor adecuado.
   - La transmisión vía satélite es básicamente una transmisión directa con un intermediario (el satélite).
