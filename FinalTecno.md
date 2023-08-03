@@ -51,6 +51,11 @@
 2. **Enlace de datos**: Detección y correción de errores. Divide la transmisión en tramas y las retransmite en caso de no recibir reconocimiento de llegada.
 3. **Red**: Controla la operación de la "Subnet". Decide cómo se enrutan los paquetes.
 
+#### Modelo TCP/IP
+
+![Modelo TCP/IP](./assets/ModeloTCPIP.jpg)
+
+---
 
 ## Formas de Ondas
 
@@ -98,6 +103,8 @@ Onda pura a partir de la cual pueden formarse las demás.
 - **Período (T)**: Duración del ciclo medido en segundos. La cantidad de tiempo que una señal necesita para completar un ciclo.
 - **Fase**: Posición relativa de la señal dentro de un período de la misma. Respecto del instante 0. Se mide en grados o radianes.
 
+<br>
+
 #### Longitud de Onda (λ)
 
 - Es la distancia ocupada por un ciclo.
@@ -110,6 +117,7 @@ Onda pura a partir de la cual pueden formarse las demás.
 - A mayor frecuencia, la longitud de onda λ disminuye.
 
 > #### **c = 3 x 10 <sup>8</sup> m/seg.** &rarr; **300.000 km/seg. (vel. luz en el vacío)**
+<br>
 
 #### Espectro de Onda
 
@@ -309,7 +317,6 @@ Dispositivo que deja pasar un rango de componentes de frecuencia y anula el rest
 | Costo                   | Bajo      | Elevado      |
 
 <br>
-<br>
 
 #### Multimodo índice escalón
 
@@ -372,6 +379,24 @@ La fibra óptica multimodo de índice escalón es un tipo de fibra óptica en la
 
 ## Medios NO Guiados
 
+### Medio de Transmisión
+
+Soporte que permite que la información viaje entre dos puntos, más o menos distantes.
+
+- Las señales no están confinadas en ningún medio físico, sino que se transmiten por el aire, el mar o el vacío.
+
+### Ondas radioeléctricas
+
+- Ondas electromagnéticas que se propagan por el espacio libre, cuyo límite superior de frecuencia se ha fijado, por convenio, en 3000Ghz.
+
+### Radiocomunicación
+
+- Cualquier comunicación transmitida por medio de ondas radioeléctricas:
+  - Radiocomunicación espacial: hace uso de elementos situados en el espacio (satélites, estaciones espaciales, etc.)
+  - Radiocomunicación terrenal: no hace uso de elementos situados en el espacio.
+  - Radioastronomía: basada en la recepción de ondas radioeléctricas con origen cósmico de muy alta frecuencia.
+
+
 ### Ondas de Radio
 
 #### Propiedades
@@ -389,12 +414,115 @@ La fibra óptica multimodo de índice escalón es un tipo de fibra óptica en la
 
 #### Transmisiones de Radio
 
-1. Ondas Superficiales
-  - Siguen la corvatura de la tierra.
+1. **Ondas Superficiales**
+  - Viajan a través de la porción más baja de la atmósfera, abrazando a la superficie terrestre, o el agua del mar.
+  - A las frecuencias más bajas, las señales emanan en todas las direcciones desde la antena transmisora y siguen la curvatura del planeta.
+  - Cuanto mayor sea la potencia de transmisión, mayor es la distancia que pueden alcanzar las señales.
   - Ej. Radio AM.
 
-2. Rebote en Ionósfera
-  - Varían constantemente (hora a hora)
+2. **Propagación troposférica**
+  - Se puede dirigir la señal en línea recta de antena a antena (visión directa).
+  - El receptor y el emisor deben estar dentro de distancias de visión, limitadas por la curvatura de la tierra en relación con la altura de las antenas.
+  - Se puede radiar con un cierto ángulo hasta los niveles superiores de la tropósfera, donde se refleja hacia la superficie de la tierra.
+  - Permite cubrir distancias mayores.
+
+3. **Propagación Ionósfera**
+  - Las ondas de radio de más frecuencia se radian hacia la Ionósfera, donde se reflejan de nuevo hacia la tierra.
+  - La densidad entre la atmósfera y la ionósfera hace que cada onda de radio se acelere y cambie de dirección, curvándose de nuevo hacia la tierra.
+  - Este tipo de transmisión permite cubrir grandes distancias con menor potencia de salida.
+  - Varían constantemente (hora a hora).
+
+4. **Propagación por visión directa**
+  - Señales de muy alta frecuencia (siguiendo una línea recta).
+  - Antenas direccionales (enfrentadas entre sí), y o bien están suficientemente altas o suficientemente juntas para no verse afectadas por la curvatura de la tierra.
+  - Compleja, porque las transmisiones de radio no se pueden enfoncar completamente.
+    - Las ondas emanan hacia arriba, hacia abajo o hacia delante y se pueden reflejar sobre la superficie de la tierra o parte de la atmósfera.
+    - Las ondas reflejadas que llegan a la antena receptora más tarde que la porción directa de la transmisión puede corromper la señal recibida.
+
+5. Propagación por el espacio
+  - Utiliza como retransmisor satélites en lugar de refracción atmosférica.
+  - Una señal radiada es recibida por un satélite situado en una determinada órbita, que la reenvía de vuelta a la tierra para el receptor adecuado.
+  - La transmisión vía satélite es básicamente una transmisión directa con un intermediario (el satélite).
+  - La distancia al satélite de la tierra es equivalente a una antena de súper alta ganancia e incrementa enórmemente la distancia que puede ser cubierta por una señal.
+
+#### Tipos de frencuencias
+
+<ins>**VLF (Very low frequency) 3Khz-30Khz**
+- Propagación como ondas de superficie (aire o agua)
+- No sufren mucha atenuación, pero son sensibles a los altos niveles de ruido atmosférico (calor y electricidad)
+- Usos habituales:
+  - Radionavegación de largo alcance
+  - Comunicaciones submarinas
+
+<ins>**LF (Low frequency) 30Khz-300Khz**
+- Propagación como ondas de superficie (aire o agua)
+- La atenuación es mayor durante el día, cuando se incrementa la absorción de las ondas por los obstáculos naturales
+- Usos habituales:
+  - Radionavegación de largo alcance
+  - Radio balizas o localizadores de navegación
+
+<ins>**MF (Middle frequency) 300Khz-3MHz**
+- Propagación troposférica
+- Estas frecuencias son absorbidas por la ionósfera, por lo que la distancia que pueden curbir está limitada por el ángulo necesario para reflejar la señal de la tropósfera sin entrar en la ionósfera
+- La absorción es mayor durante el día
+- Usos habituales:
+  - Transmisiones AM
+  - Radio marítima
+  - Buscadores audiodireccionales (RDF)
+  - Frecuencias de emergencia
+
+<ins>**HF (High frequency) 3MHz-30MHz**
+- Propagación ionosférica
+- Usos habituales:
+  - Radioaficionados
+  - Radio de bandas de ciudadanos (CB)
+  - Emisiones internacionales
+  - Comunicaciones militares
+  - Comunicación de larga distancia para aviones y barcos, teléfonos, telégrafos y faxes
+
+<ins>**VHF (Very High frequency) 30MHz-300MHz**
+- Mayoritariamente, propagación de visión directa
+- Usos habituales:
+  - Televisión
+  - Radio FM
+  - Radio AM de los aviones y ayuda de navegación de los aviones
+
+<ins>**UHF(Ultra High frequency) 300MHz-3GHz**
+- Siempre propagación de visión directa
+- Usos habituales:
+  - Televisión
+  - Teléfonos móviles
+  - Radio celular
+  - Buscadores y enlaces microondas
+
+<ins>**SHF (Super High frequency) 3GHz-300GHz**
+- Propagación de visión directa, propagación espacial
+- Usos habituales:
+  - Microondas terrestres y satélite
+  - Comunicación radar.
+
+<ins>**EHF (Extremely High frequency)
+- Propagación espacial
+- Usos habituales, predominantemente científicos:
+  - Radar
+  - Satélite
+  - Comunicaciones experimentales
+
+
+#### Los tres rangos de frecuencias principales en una transmisión no guiada son:
+
+* **Radio**
+  - 30MHz a 1GHz
+  - Transmisiones omnidireccionales
+
+* **Microondas**
+  - 1GHz a 40GHz
+  - Son posibles transmisiones altamente direccionales
+  - Adecuadas para transmisiones punto a punto y transmisiones vía satélite
+
+* **Infrarojos**
+  - 3x10<sup>11</sup> a 2x10<sup>14</sup> Hz
+  - Comunicaciones punto a punto o multipunto locales (dentro de áreas delimitadas)
 
 #### Satélites de Comunicaciones
 
@@ -416,7 +544,7 @@ La señal de radio se transmite directamente desde una ubicación (el punto de o
 
 - Un transmisor envía la señal a una antena y luego existen múltiples receptores de la misma.
 
-
+---
 
 ## Modulación
 
@@ -441,7 +569,7 @@ La señal de radio se transmite directamente desde una ubicación (el punto de o
 >
 > Rango: 6Khz
 
-### Modulación FSK ()
+### Modulación FSK
 
 ***Frecuencia Modulada***
 
@@ -474,12 +602,13 @@ La señal de radio se transmite directamente desde una ubicación (el punto de o
 ### Funciones de la Capa de Enlace de Datos
 
 - Armado de tramas
-- Control de errores
+- Delimitar las tramas mediante algún método de entramado.
+- Implementa algoritmos de detección y/o correción de errores.
 - Control de flujo
 
 ### Trama
 
-- Una trama es la unidad básica de datos transmitida entre dispositivos.
+Una trama es la unidad básica de datos transmitida entre dispositivos.
 
 | Header  |    Payload     |   Trailer
 |---------|----------------|--------------|
@@ -518,9 +647,31 @@ La señal de radio se transmite directamente desde una ubicación (el punto de o
 
 - Es importante tener en cuenta que el control de paridad solo puede detectar un número impar de errores de bits. **Si el número de errores es par, pasarán desapercibidos.**
 
+#### Redundancia
+
+Corresponde al uso de esos bits adicionales de paridad.
+
+<ins>Hay dos tipos de control de errores basados en redundancia:
+  - Detección de errores &rarr; **CRC**
+  - Corrección de errores &rarr; **Hamming**
+
+<ins>Distancia de Hamming
+
+- La "distancia de código binario" es la menor distancia de Hamming entre cualquier par de palabras.
+
+- Un código binario con una distancia mínima de 3, puede detectar y corregir hasta dos errores en una palabra.
+
+- En los códigos de Hamming y otros códigos de corrección de errores, una distancia de Hamming mayor entre las palabras de código puede permitir una mejor detección y corrección de errores.
+
+- Si las palabras de código están más separadas en términos de la distancia de Hamming, entonces un mayor número de errores de bit pueden ocurrir antes de que una palabra de código válida se transforme en otra palabra de código válida.
+
+- Pueden manejar "errores de grado 1", es decir, situaciones en las que sólo un bit ha cambiado de su valor original.
+
+---
+
 ## ARQ (Control de Flujo)
 
-![Trama de Enlace de Datos](./assets/TramaEnlaceDatos.jpgo
+<img src="./assets/TramaEnlaceDatos.jpg" width="68%">
 
 ### Protocolo ARQ
 
@@ -548,6 +699,7 @@ La señal de radio se transmite directamente desde una ubicación (el punto de o
 
 - **Repetición Selectiva**: Al igual que GBN, RS permite que el emisor envíe varios paquetes a la vez. Sin embargo, en lugar de retransmitir todos los paquetes después de una pérdida, SR solo retransmite el paquete perdido. Esto puede ser más eficiente que GBN si la tasa de pérdida de paquetes es alta.
 
+---
 
 ## Protocolos de Acceso al Medio
 
